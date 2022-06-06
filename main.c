@@ -50,7 +50,7 @@ int main(){
     printf("\xb3_________________________________________________________________________________________________________________\xb3\n");
     printf("\xb3");
     SetColor(12);
-	printf("                      [1]FEATURES                     [2]ABOUT                      [3]EXIT                      ");
+	printf("                  [1]FEATURES           [2]ABOUT          [3]HOW TO PLAY        [4]EXIT                          ");
 	SetColor(13);
 	printf("\xb3\n");
     printf("\xb3_________________________________________________________________________________________________________________\xb3\n\n");
@@ -65,6 +65,8 @@ int main(){
 			about();
 			break;
 		case 3:
+			howToPlay();
+		case 4:
 			return 0;
 		default:
 			SetColor(64);
@@ -407,6 +409,26 @@ void about(){
 	printf("\nUntuk memenuhi Tugas Besar mata kuliah Struktur Data dan Algoritma.\n\n");
 	system("pause");
 	main();
+}
+
+void howToPlay(){
+	system("cls");
+	SetColor(12);
+	printf("\t\t\tCARA MENGGUNAKAN APLIKASI\n");
+	printf("KALKULATOR\n");
+	printf("1. Masukan operasi matematika yang akan dimasukan, bisa menggunakan +,-,x,X,*,/,:\n");
+	printf("2. Pastikan perhitungan yang dilakukan benar dan tidak terjadi error\n");
+	printf("3. Tekan Enter untuk melihat hasil perhitungan\n");
+	printf("4. Bila ingin melakukan perhitungan kembali ketik1, dan ketik 2 untuk kembali ke menu\n\n\n");
+	printf("BILLING\n");
+	printf("1. masukan banyak barang\n");
+	printf("2. Masukan sesuai instruksi yang telah terdapat pada tampilan billing\n\n\n");
+	printf("KONVERSI MATA UANG\n");
+	printf("1. Masukan pilihan apa yang akan dikonversikan\n");
+	printf("2. Masukan nominal uang yang akan dikonversikan, lalu tekan enter");
+	system("pause");
+	main();
+	
 }
 
 void SetColor(unsigned short color) {
