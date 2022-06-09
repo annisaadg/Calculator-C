@@ -238,6 +238,10 @@ void buildTree ( stack s, Tnode *node, info postfix){
 	int j = 0;
 	address tempT;
 	info tmpPostfix;
+<<<<<<< HEAD
+=======
+//	boolean Digit;
+>>>>>>> 08d68130d2ff6e01f0d012e58559b0ee4bbe4035
 	int k;
 	struct Token Tokenizazer[100];
 

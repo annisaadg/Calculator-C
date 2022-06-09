@@ -11,7 +11,10 @@
 #include <windows.h>
 #include "kalkulator.h"
 #include "konversi.h"
+<<<<<<< HEAD
 #include "convertlength.h"
+=======
+>>>>>>> 08d68130d2ff6e01f0d012e58559b0ee4bbe4035
 #include "Trigonometri.h"
 
 void mainKalkulator();
@@ -90,7 +93,11 @@ void features(){
 	SetColor(14);
 	puts("\t\t\t\t\t| 3] Konversi Satuan Panjang  |");
 	SetColor(14);
+<<<<<<< HEAD
 	puts("\t\t\t\t\t| 4] Trigono                  |");
+=======
+	puts("\t\t\t\t\t| 4] Trigono              |");
+>>>>>>> 08d68130d2ff6e01f0d012e58559b0ee4bbe4035
 	SetColor(6);
 	puts("\t\t\t\t\t| 5] Back                     |");
 	puts("\t\t\t\t\t =============================");
@@ -105,7 +112,11 @@ void features(){
 			mainKonversi();
 			break;
 		case 3:
+<<<<<<< HEAD
 			mainKonversiPanjang();
+=======
+			mainBilling();
+>>>>>>> 08d68130d2ff6e01f0d012e58559b0ee4bbe4035
 			break;	
 		case 4:
 			mainTrigono();
@@ -162,6 +173,87 @@ void mainKalkulator(){
     		default:
     			main();
 		}
+<<<<<<< HEAD
+=======
+}
+
+void mainTrigono(){
+	system("cls");
+SetColor(9);
+printf( " ________  _______   ______   ______    ______   __    __   ______ \n ");
+printf( "|        \\|       \\ |      \\ /      \\  /      \\ |  \\  |  \\ /      \\ \n");
+printf( "  \\$$$$$$$$| $$$$$$$\  \\$$$$$$|  $$$$$$\\|  $$$$$$\\| $$\\ | $$|  $$$$$$\\ \n");
+printf( "    | $$   | $$__| $$  | $$  | $$ __\\$$| $$  | $$| $$$\\| $$| $$  | $$ \n");
+printf( "    | $$   | $$    $$  | $$  | $$|    \\| $$  | $$| $$$$\\ $$| $$  | $$ \n");
+printf( "    | $$   | $$$$$$$\\  | $$  | $$ \\$$$$| $$  | $$| $$\\$$ $$| $$  | $$ \n");
+printf( "    | $$   | $$  | $$ _| $$_ | $$__| $$| $$__/ $$| $$ \\$$$$| $$__/ $$ \n");
+printf( "    | $$   | $$  | $$|   $$ \\ \\$$    $$ \\$$    $$| $$  \\$$$ \\$$    $$ \n");
+printf( "      \$$    \\$$   \\$$ \\$$$$$$  \\$$$$$$   \\$$$$$$  \\$$   \\$$  \\$$$$$$ \n");
+SetColor(4);
+printf(" 1.  Akar 2\n");
+printf(" 2.  Angka Pangkat Angka\n");
+printf(" 3.  Nilai Faktorial\n");
+printf(" 4.  Nilai Logaritma\n");
+printf(" 5.  Nilai Modulus\n");
+printf(" 6.  Nilai Sin\n");
+printf(" 7.  Nilai Cos\n");
+printf(" 8.  Nilai Tan\n");
+printf(" 9.  Nilai Cosec\n");
+printf(" 10. Nilai Cot\n");
+printf(" 11. Nilai Sec\n");
+printf(" Angka sembarang = main menu\n\n");
+printf("MASUKAN PILIHAN:  ");
+	int inputan;
+	scanf("%d",&inputan);
+	switch(inputan){
+		case 1:
+			akarDua();
+			mainTrigono();
+			break;
+		case 2:
+			angkaPangkatAngka();
+			mainTrigono();
+			break;
+		case 3:	
+			Faktorial();
+			mainTrigono();
+			break;
+		case 4:
+			Logaritma();
+			mainTrigono();
+			break;
+		case 5:
+			modulus();
+			mainTrigono();
+			break;
+		case 6:
+			TrigonoSin();
+			mainTrigono();
+			break;
+		case 7:
+			TrigonoCos();
+			mainTrigono();
+			break;
+		case 8:
+			TrigonoTan();
+			mainTrigono();
+			break;	
+		case 9:
+			TrigonoCosec();
+			mainTrigono();
+			break;		
+		case 10:
+			TrigonoCot();
+			mainTrigono();
+			break;	
+		case 11:
+			TrigonoSec();
+			mainTrigono();
+			break;	
+		default :
+			main();
+	}
+>>>>>>> 08d68130d2ff6e01f0d012e58559b0ee4bbe4035
 }
 
 void mainTrigono(){
@@ -389,7 +481,11 @@ void howToPlay(){
 	printf("2. Masukan sesuai instruksi yang telah terdapat pada tampilan billing\n\n\n");
 	printf("KONVERSI MATA UANG\n");
 	printf("1. Masukan pilihan apa yang akan dikonversikan\n");
+<<<<<<< HEAD
 	printf("2. Masukan nominal uang yang akan dikonversikan, lalu tekan enter\n");
+=======
+	printf("2. Masukan nominal uang yang akan dikonversikan, lalu tekan enter");
+>>>>>>> 08d68130d2ff6e01f0d012e58559b0ee4bbe4035
 	system("pause");
 	main();
 	
