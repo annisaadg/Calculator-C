@@ -1,23 +1,17 @@
-/** Nama File : konversi.c
- *  Deskripsi : File Body Billings
- *  Oleh      : Dhafin Rizqi Fadhilah
- *  Tanggal   : 
- */
-
-#include "konversi.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Menampilkan waktu berupa tanggal saat kurs diambil
  * I.S. : Waktu belum tampil
  * F.S. : Waktu sudah ditampilkan
  */
 void tanggalKurs(){
-	printf("\t\t\t\t Kurs Transaksi ini berdasarkan Bank Indonesia pada tanggal 20 Mei 2022\n");
+	printf("\t\t Kurs Transaksi ini berdasarkan Bank Indonesia pada tanggal 20 Mei 2022\n");
 }
 
 /* Mengubah Rupiah ke Dollar
  * I.S. : Mata uang masih berjenis Rupiah
- * F.S. : 	
+ * F.S. : Mata uang sudah dikonversi menjadi Dollar
  */
 void convertRupiahtoDollar(){
 	float kursJual = 14804.66;
@@ -25,13 +19,13 @@ void convertRupiahtoDollar(){
 	float nilaiRupiah;
 	float hasilKursBeli;
 	float hasilKursJual;
-	printf("\t\t\t\t Masukkan Nilai Dalam Rupiah :");
+	printf("\t\t Masukkan Nilai Dalam Rupiah :");
 	scanf("%f",&nilaiRupiah);
 	fflush(stdin);
 	hasilKursBeli = nilaiRupiah/kursBeli;
 	hasilKursJual = nilaiRupiah/kursJual;
-	printf("\t\t\t\t Hasil Konversi Kurs Jual Ke Dollar : %.2f\n",hasilKursJual);
-	printf("\t\t\t\t Hasil Konversi Kurs Beli ke Dollar : %.2f\n",hasilKursBeli);
+	printf("\t\t Hasil Konversi Kurs Jual Ke Dollar : %.2f\n",hasilKursJual);
+	printf("\t\t Hasil Konversi Kurs Beli ke Dollar : %.2f\n",hasilKursBeli);
 	tanggalKurs();
 }
 
@@ -45,13 +39,13 @@ void convertDollartoRupiah(){
 	float nilaiDollar;
 	float hasilKursBeli;
 	float hasilKursJual;
-	printf("\t\t\t\t Masukkan Nilai Dalam Dollar :");
+	printf("\t\t Masukkan Nilai Dalam Dollar :");
 	scanf("%f",&nilaiDollar);
 	fflush(stdin);
 	hasilKursBeli = nilaiDollar*kursBeli;
 	hasilKursJual = nilaiDollar*kursJual;
-	printf("\t\t\t\t Hasil Konversi Kurs Jual Ke Rupiah : %.2f\n",hasilKursJual);
-	printf("\t\t\t\t Hasil Konversi Kurs Beli ke Rupiah : %.2f\n",hasilKursBeli);
+	printf("\t\t Hasil Konversi Kurs Jual Ke Rupiah : %.2f\n",hasilKursJual);
+	printf("\t\t Hasil Konversi Kurs Beli ke Rupiah : %.2f\n",hasilKursBeli);
 	tanggalKurs();
 }
 
@@ -65,13 +59,13 @@ void convertRupiahtoYen(){
 	float nilaiRupiah;
 	float hasilKursBeli;
 	float hasilKursJual;
-	printf("\t\t\t\t Masukkan Nilai Dalam Rupiah :");
+	printf("\t\t Masukkan Nilai Dalam Rupiah :");
 	scanf("%f",&nilaiRupiah);
 	fflush(stdin);
 	hasilKursBeli = nilaiRupiah/kursBeli;
 	hasilKursJual = nilaiRupiah/kursJual;
-	printf("\t\t\t\t Hasil Konversi Kurs Jual Ke Yen : %.2f\n",hasilKursJual);
-	printf("\t\t\t\t Hasil Konversi Kurs Beli ke Yen : %.2f\n",hasilKursBeli);
+	printf("\t\t Hasil Konversi Kurs Jual Ke Yen : %.2f\n",hasilKursJual);
+	printf("\t\t Hasil Konversi Kurs Beli ke Yen : %.2f\n",hasilKursBeli);
 	tanggalKurs();
 }
 
@@ -85,13 +79,13 @@ void convertYentoRupiah(){
 	float nilaiYen;
 	float hasilKursBeli;
 	float hasilKursJual;
-	printf("\t\t\t\t Masukkan Nilai Dalam Yen :");
+	printf("\t\t Masukkan Nilai Dalam Yen :");
 	scanf("%f",&nilaiYen);
 	fflush(stdin);
 	hasilKursBeli = nilaiYen*kursBeli;
 	hasilKursJual = nilaiYen*kursJual;
-	printf("\t\t\t\t Hasil Konversi Kurs Jual Ke Rupiah : %.2f\n",hasilKursJual);
-	printf("\t\t\t\t Hasil Konversi Kurs Beli ke Rupiah : %.2f\n",hasilKursBeli);
+	printf("\t\t Hasil Konversi Kurs Jual Ke Rupiah : %.2f\n",hasilKursJual);
+	printf("\t\t Hasil Konversi Kurs Beli ke Rupiah : %.2f\n",hasilKursBeli);
 	tanggalKurs();
 }
 
@@ -105,13 +99,13 @@ void convertRupiahtoEuro(){
 	float nilaiRupiah;
 	float hasilKursBeli;
 	float hasilKursJual;
-	printf("\t\t\t\t Masukkan Nilai Dalam Rupiah :");
+	printf("\t\t Masukkan Nilai Dalam Rupiah :");
 	scanf("%f",&nilaiRupiah);
 	fflush(stdin);
 	hasilKursBeli = nilaiRupiah/kursBeli;
 	hasilKursJual = nilaiRupiah/kursJual;
-	printf("\t\t\t\t Hasil Konversi Kurs Jual Ke Euro : %.2f\n",hasilKursJual);
-	printf("\t\t\t\t Hasil Konversi Kurs Beli ke Euro : %.2f\n",hasilKursBeli);
+	printf("\t\t Hasil Konversi Kurs Jual Ke Euro : %.2f\n",hasilKursJual);
+	printf("\t\t Hasil Konversi Kurs Beli ke Euro : %.2f\n",hasilKursBeli);
 	tanggalKurs();
 }
 
@@ -125,12 +119,70 @@ void convertEurotoRupiah(){
 	float nilaiEuro;
 	float hasilKursBeli;
 	float hasilKursJual;
-	printf("\t\t\t\t Masukkan Nilai Dalam Euro :");
+	printf("\t\t Masukkan Nilai Dalam Euro :");
 	scanf("%f",&nilaiEuro);
 	fflush(stdin);
 	hasilKursBeli = nilaiEuro*kursBeli;
 	hasilKursJual = nilaiEuro*kursJual;
-	printf("\t\t\t\t Hasil Konversi Kurs Jual Ke Rupiah : %.2f\n",hasilKursJual);
-	printf("\t\t\t\t Hasil Konversi Kurs Beli ke Rupiah : %.2f\n",hasilKursBeli);
+	printf("\t\t Hasil Konversi Kurs Jual Ke Rupiah : %.2f\n",hasilKursJual);
+	printf("\t\t Hasil Konversi Kurs Beli ke Rupiah : %.2f\n",hasilKursBeli);
 	tanggalKurs();
 }
+
+//int mainKonversi(){
+//int pilih;
+//char back;
+//menu :
+//	
+//printf("\t\t ____________________________________________\n                \xb3                                            \xb3\n");
+//printf("\t\t\xb3\t Program Konversi Mata Uang          \xb3\n");
+//printf("\t\t\xb3____________________________________________\xb3\n");
+//printf("\t\t\xb3 1.Rupiah ke Dollar                         \xb3\n");
+//printf("\t\t\xb3 2.Dollar ke Rupiah                         \xb3\n");
+//printf("\t\t\xb3 3.Rupiah ke Yen                            \xb3\n");
+//printf("\t\t\xb3 4.Yen ke Rupiah                            \xb3\n");
+//printf("\t\t\xb3 5.Rupiah ke Euro                           \xb3\n");
+//printf("\t\t\xb3 6.Euro ke Rupiah                           \xb3\n");
+//printf("\t\t\xb3                                            \xb3\n");
+//printf("\t\t\xb3____________________________________________\xb3\n");
+//printf("\t\t Masukkan Pilihan :");
+//scanf("%d",&pilih);
+//
+///* Memilih tipe mata uang yang akan dikonversi
+// * I.S. : Belum memilih mata uang yang ingin dikonversi
+// * F.S. : Sudah menentukan jenis mata uang yang ingin dikonversi
+// */
+//switch(pilih){
+//	case 1 :
+//		convertRupiahtoDollar();
+//		break;
+//	case 2 :
+//		convertDollartoRupiah();
+//		break;
+//	case 3 :
+//		convertRupiahtoYen();
+//		break;
+//	case 4 :
+//		convertYentoRupiah();
+//		break;
+//	case 5 :
+//		convertRupiahtoEuro();
+//		break;
+//	case 6 :
+//		convertEurotoRupiah();
+//		break;
+//	default :
+//		goto menu;
+//}
+//printf("\t\t Apakah ingin mengkonversi mata uang lain?(Masukkan Y/N untuk melanjutkan)");
+//scanf("%c",&back);
+//
+//if(back == 'y'|| back == 'Y'){
+//	system("cls");
+//	goto menu;
+//} else{
+//	exit(0);
+//}
+//}
+
+

@@ -2,9 +2,9 @@
  *  Deskripsi : File Body Kalkulator
  *  Oleh      : -Zacky Faishal Abror
  *				-Annisa Dinda Gantini
- *				-Dhafin Rizqi Fadhilah
- *  Tanggal   : 
- */
+*				- Dhafin Rizqi Fadhilah
+*/
+
 #include "kalkulator.h"
 #include <stdio.h>
 #include <conio.h>
@@ -82,8 +82,8 @@ address alokasi(info x){ //
 	
 	tree = (ElmtNode*)malloc(sizeof(ElmtNode));
 	strcpy(tree->MathExpression,x);
-	tree->left = NULL;
-	tree->right = NULL;
+//	tree->left = NULL;
+//	tree->right = NULL;
 	
 	Stack = (tabStack*)malloc(sizeof(tabStack));
 	if(Stack != NULL){
@@ -180,10 +180,6 @@ void toPostfix (info text, stack s, info *hasil){
 	while(text[j] != '\0'){
 		Digit=false;
 		tmpText[0] = text[j];
-		if(text[j-1] == '(' && text[j] == '-'){
-			tmpText[1] = text[j-1];
-			j++;
-		}
 		j++;
 		
 		if(isdigit(text[j])){
@@ -236,19 +232,17 @@ void toPostfix (info text, stack s, info *hasil){
  * I.S. : Tree operasi belum terdefinisi
  * F.S. : Tree operasi sudah terdefinisi
  */
-void buildTree ( stack s, Tnode *node, info text){
-	int batastext =strlen(text);
+void buildTree ( stack s, Tnode *node, info postfix){
+	int batastext =strlen(postfix); //mengambil panjang string dalam postfix
 	int i;
 	int j = 0;
-	Tnode temp;
 	address tempT;
-	info tmpText;
-	boolean Digit;
+	info tmpPostfix;
 	int k;
 	struct Token Tokenizazer[100];
-	
-	strcat(text," ");
-	char* token =strtok(text," ");
+
+	strcat(postfix," ");
+	char* token =strtok(postfix," ");
 	
 	while (token != NULL){
 		strcpy(Tokenizazer[j].token,token);
@@ -256,8 +250,8 @@ void buildTree ( stack s, Tnode *node, info text){
 		token=strtok(NULL," ");
 	}
 	for (i=0;i<j;i++){
-		strcpy(tmpText,Tokenizazer[i].token);
-		if (isoperator(tmpText)){
+		strcpy(tmpPostfix,Tokenizazer[i].token);
+		if (isoperator(tmpPostfix)){
 			ElmtNode *tree;
 			tree = (ElmtNode*)malloc(sizeof(ElmtNode));
 			//tree ->MathExpression = text[i
@@ -267,11 +261,11 @@ void buildTree ( stack s, Tnode *node, info text){
 			pop(&s,&tempT);
 			tree->right = tempT->node;
 			
-			pushTree(&s,tmpText,tree->left,tree->right);
+			pushTree(&s,tmpPostfix,tree->left,tree->right);
 		}else{
-			push(&s,tmpText);	
+			push(&s,tmpPostfix);	
 		}
-		tmpText[0]='\0';
+		tmpPostfix[0]='\0';
 	}
 	
 	pop(&s,&tempT);
@@ -289,7 +283,7 @@ int calculate(Tnode root){
 		return calculate(root->left)-calculate(root->right);
 	}if(isequal(root->MathExpression,"*")|| isequal(root -> MathExpression, "X") || isequal(root -> MathExpression, "x")){
 		return calculate(root->left)*calculate(root->right);
-	}if(isequal(root->MathExpression,"/")){
+	}if(isequal(root->MathExpression,"/")||isequal(root->MathExpression,":")){
 		return calculate(root->left)/calculate(root->right);
 	}else{
 		int val;
